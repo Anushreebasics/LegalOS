@@ -1,24 +1,10 @@
 # Floating Hero Section (Legal Work Platform)
 
-This project recreates the “Legal Work Platform” hero section using **Next.js (App Router)**, **Tailwind CSS**, **Framer Motion**, and **lucide-react**.
+This project recreates the “Legal Work Platform” hero section with a responsive split layout, reusable floating cards, a unique portal card variant, and polished motion.
 
-## Demo Video
-[Watch the video on Google Drive](https://drive.google.com/file/d/1EHQP7uZv_8-ODGDLVw-3ci38bhx9bVWa/preview)
+## Demo
 
-## Features
-
-- Split hero layout: text on the left, floating visualization on the right
-- Reusable `FloatingCard` component with configurable:
-	- `color`
-	- `rotation`
-	- `icon`
-	- `label`
-- Dedicated portal-style variant (`John Doe - Portal`) built using the shared card architecture
-- Light/Dark theme support using `next-themes`
-- Responsive behavior:
-	- Desktop: full floating composition
-	- Mobile: simplified but polished floating composition
-- Soft background blobs and pill strips for depth
+[Watch the video on Google Drive](https://drive.google.com/file/d/1Ra69UsFG1x-5ubPnqOc5TN0rBgKLY4ZY/view?usp=sharing)
 
 ## Tech Stack
 
@@ -29,19 +15,34 @@ This project recreates the “Legal Work Platform” hero section using **Next.j
 - lucide-react
 - next-themes
 
+## Implemented Requirements
+
+- Split hero layout: left text + right floating visualization
+- Reusable `FloatingCard` with configurable `color`, `rotation`, `icon`, and `label`
+- Specialized `JohnDoeCard` built on top of the shared floating card architecture (portal variant)
+- Light and dark theme with tuned dark palette for better contrast
+- Responsive behavior:
+  - Desktop: full floating composition
+  - Mobile: structured floating composition optimized for small screens
+- Background depth using soft blobs and rounded strips
+- Subtle animations:
+  - fade-in + rise entrance
+  - continuous gentle floating/sway
+  - hover lift/scale polish
+
 ## Project Structure
 
 ```text
 app/
-	page.tsx                      # Hero layout + responsive compositions
-	globals.css                   # Global styles + font family
-	layout.tsx                    # App shell + Plus Jakarta Sans font setup
-	components/
-		FloatingCard.tsx            # Reusable floating card (pill + portal variant)
-		JohnDoeCard.tsx             # Specialized portal card content
-		BlobBackground.tsx          # Decorative background blobs/strips
-		DarkModeToggle.tsx          # Light/dark toggle
-		Providers.tsx               # Theme provider
+  page.tsx                      # Main hero layout (desktop + mobile composition)
+  layout.tsx                    # App shell + Plus Jakarta Sans via next/font
+  globals.css                   # Global styles + theme variant setup
+  components/
+    FloatingCard.tsx            # Reusable floating card (pill + portal variant)
+    JohnDoeCard.tsx             # Portal card content
+    BlobBackground.tsx          # Decorative animated background blobs/strips
+    DarkModeToggle.tsx          # Light/dark mode toggle
+    Providers.tsx               # next-themes provider
 ```
 
 ## Run Locally
@@ -51,9 +52,9 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open http://localhost:3000
 
-## Quality Checks
+## Checks
 
 ```bash
 npm run lint
@@ -62,6 +63,6 @@ npm run build
 
 ## Notes
 
-- Typography uses **Plus Jakarta Sans** via `next/font/google`.
-- Theme is class-based (`dark`) through `next-themes`.
-- Floating motion and staggered entry animations are handled by Framer Motion.
+- Font: Plus Jakarta Sans (`next/font/google`)
+- Styling: Tailwind CSS utility + arbitrary values (for example, rotation classes)
+- Icons: lucide-react (`Receipt`, `Gavel`, `CheckSquare`, `FileText`)
