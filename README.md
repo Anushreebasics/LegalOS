@@ -2,6 +2,9 @@
 
 This project recreates the “Legal Work Platform” hero section using **Next.js (App Router)**, **Tailwind CSS**, **Framer Motion**, and **lucide-react**.
 
+## Demo Video
+[Watch the video on Google Drive](https://drive.google.com/file/d/1EHQP7uZv_8-ODGDLVw-3ci38bhx9bVWa/preview)
+
 ## Features
 
 - Split hero layout: text on the left, floating visualization on the right

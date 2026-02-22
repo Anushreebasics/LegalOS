@@ -48,11 +48,11 @@ export default function Home() {
             className="text-[2.25rem] sm:text-6xl xl:text-[4.5rem] leading-[1.1] tracking-[-0.03em] text-[#7D84AB] dark:text-[#A7AFD6]"
           >
             A single platform to{" "}
-            <strong className="font-extrabold text-[#58608E] dark:text-[#DFE5FF]">
+            <strong className="font-extrabold text-[#111184] dark:text-[#DFE5FF]">
               manage
             </strong>{" "}
             every part of your{" "}
-            <strong className="font-extrabold text-[#58608E] dark:text-[#DFE5FF]">
+            <strong className="font-extrabold text-[#111184] dark:text-[#DFE5FF]">
               legal work
             </strong>
           </motion.h1>
@@ -128,19 +128,19 @@ export default function Home() {
                 {
                   icon: <Receipt size={15} className="text-white" />,
                   label: "Billing",
-                  className: "bg-[#3D5AFE] text-white rotate-[6deg] justify-self-end",
+                  className: "bg-[#3D5AFE] text-white rotate-[6deg] justify-self-end dark:bg-[#4B66FF]",
                   delay: 0.4,
                 },
                 {
                   icon: <Gavel size={15} className="text-white" />,
                   label: "Matters",
-                  className: "bg-[#C97B30] text-white -rotate-[6deg] justify-self-start mt-3",
+                  className: "bg-[#C97B30] text-white -rotate-[6deg] justify-self-start mt-3 dark:bg-[#D58A3D]",
                   delay: 0.5,
                 },
               ] as const).map(({ icon, label, className, delay }) => (
                 <motion.div
                   key={label}
-                  className={`inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-2 text-sm font-bold whitespace-nowrap shadow-lg ${className}`}
+                  className={`inline-flex w-fit items-center gap-2 rounded-[40px] p-5 text-sm font-bold whitespace-nowrap border border-transparent dark:border-white/10 shadow-lg ${className}`}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: [0, -5, 0] }}
                   transition={{
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
 
             <motion.div
-              className="relative z-10 mt-3 w-full rounded-2xl bg-[#B4BBDB] p-3 shadow-lg dark:bg-[#2D334E]"
+              className="relative z-10 mt-3 w-full rounded-[40px] bg-[#CBD1E8] p-5 border border-transparent dark:border-white/10 shadow-lg dark:bg-[#46527C]"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: [0, -5, 0] }}
               transition={{
@@ -168,7 +168,7 @@ export default function Home() {
             >
               <div className="flex items-start gap-2.5">
                 <div className="h-10 w-1 rounded-full bg-[#C97B30]" />
-                <div className="h-9 w-9 rounded-full bg-[#8B7355] dark:bg-[#90795A]" />
+                <div className="h-9 w-9 rounded-full bg-[#B0916A] dark:bg-[#B79A72]" />
                 <div className="min-w-0">
                   <p className="truncate text-[12px] font-bold text-[#1E1B2E] dark:text-[#E6EBFF]">John Doe - Portal</p>
                   <p className="line-clamp-1 text-[10px] text-[#4A4870] dark:text-[#C4CCE8]">Could you please review a document for me?</p>
@@ -181,19 +181,19 @@ export default function Home() {
                 {
                   icon: <CheckSquare size={15} className="text-[#C97B30]" />,
                   label: "Tasks",
-                  className: "bg-[#1E1B2E] text-white justify-self-start",
+                  className: "bg-[#1E1B2E] text-white justify-self-start dark:bg-[#2F3352]",
                   delay: 0.65,
                 },
                 {
                   icon: <FileText size={15} className="text-[#C97B30]" />,
                   label: "Documents",
-                  className: "bg-[#1E1B2E] text-white rotate-[5deg] justify-self-end",
+                  className: "bg-[#1E1B2E] text-white rotate-[5deg] justify-self-end dark:bg-[#2F3352]",
                   delay: 0.7,
                 },
               ] as const).map(({ icon, label, className, delay }) => (
                 <motion.div
                   key={label}
-                  className={`inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-2 text-sm font-bold whitespace-nowrap shadow-lg ${className}`}
+                  className={`inline-flex w-fit items-center gap-2 rounded-[40px] p-5 text-sm font-bold whitespace-nowrap border border-transparent dark:border-white/10 shadow-lg ${className}`}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: [0, -5, 0] }}
                   transition={{

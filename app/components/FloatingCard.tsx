@@ -6,17 +6,17 @@ import { ReactNode } from "react";
 type CardColor = "blue" | "orange" | "dark" | "lavender";
 
 const colorMap: Record<CardColor, string> = {
-  blue: "bg-[#3D5AFE] text-white",
-  orange: "bg-[#C97B30] text-white",
-  dark: "bg-[#1E1B2E] text-white dark:bg-[#25223A]",
-  lavender: "bg-[#B4BBDB] text-[#2D2A3E] dark:bg-[#2D334E] dark:text-[#DEE3F7]",
+  blue: "bg-[#3D5AFE] text-white dark:bg-[#4B66FF]",
+  orange: "bg-[#C97B30] text-white dark:bg-[#D58A3D]",
+  dark: "bg-[#1E1B2E] text-white dark:bg-[#2F3352]",
+  lavender: "bg-[#CBD1E8] text-[#2D2A3E] dark:bg-[#46527C] dark:text-[#E5EBFF]",
 };
 
 const iconBgMap: Record<CardColor, string> = {
-  blue: "bg-white/20",
-  orange: "bg-white/20",
-  dark: "bg-white/10",
-  lavender: "bg-white/30",
+  blue: "bg-white/20 dark:bg-white/20",
+  orange: "bg-white/20 dark:bg-white/20",
+  dark: "bg-white/10 dark:bg-white/16",
+  lavender: "bg-white/30 dark:bg-white/16",
 };
 
 interface FloatingCardProps {
@@ -50,8 +50,8 @@ export default function FloatingCard({
   return (
     <motion.div
       className={`absolute shadow-xl select-none ${isPortal
-        ? `rounded-3xl overflow-hidden ${colorMap[color]} ${className}`
-        : `flex items-center gap-3 px-6 py-4 rounded-full ${colorMap[color]} ${className}`
+        ? `rounded-[40px] overflow-hidden border border-transparent dark:border-white/10 ${colorMap[color]} ${className}`
+        : `flex items-center gap-3 p-5 rounded-[40px] border border-transparent dark:border-white/10 ${colorMap[color]} ${className}`
         }`}
       initial={{ opacity: 0, y: 40 }}
       animate={{

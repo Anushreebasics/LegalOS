@@ -49,33 +49,33 @@ export default function BlobBackground() {
             />
 
             <motion.div
-                className="absolute top-[95px] right-[-35px] h-[84px] w-[310px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#1E2436] dark:opacity-95"
+                className="absolute top-[95px] right-[-35px] h-[84px] w-[310px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#27304B] dark:opacity-55"
                 animate={{ x: [0, 8, 0] }}
                 transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
-                className="absolute top-[205px] right-[-45px] h-[84px] w-[390px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#1E2436] dark:opacity-95"
+                className="absolute top-[205px] right-[-45px] h-[84px] w-[390px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#27304B] dark:opacity-55"
                 animate={{ x: [0, -10, 0] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
             />
             <motion.div
-                className="absolute top-[315px] right-[-20px] h-[84px] w-[300px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#1E2436] dark:opacity-95"
+                className="absolute top-[315px] right-[-20px] h-[84px] w-[300px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#27304B] dark:opacity-55"
                 animate={{ x: [0, 7, 0] }}
                 transition={{ duration: 8.8, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
             />
 
             <motion.div
-                className="absolute top-[330px] left-[-95px] h-[84px] w-[310px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#1E2436] dark:opacity-95"
+                className="absolute top-[330px] left-[-95px] h-[84px] w-[310px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#27304B] dark:opacity-55"
                 animate={{ x: [0, -9, 0] }}
                 transition={{ duration: 9.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             />
             <motion.div
-                className="absolute top-[445px] left-[-80px] h-[84px] w-[280px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#1E2436] dark:opacity-95"
+                className="absolute top-[445px] left-[-80px] h-[84px] w-[280px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#27304B] dark:opacity-55"
                 animate={{ x: [0, 8, 0] }}
                 transition={{ duration: 8.6, repeat: Infinity, ease: "easeInOut", delay: 0.25 }}
             />
             <motion.div
-                className="absolute bottom-[70px] left-[-70px] h-[84px] w-[480px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#1E2436] dark:opacity-95"
+                className="absolute bottom-[70px] left-[-70px] h-[84px] w-[480px] rounded-full bg-[#DEE3F1] opacity-85 dark:bg-[#27304B] dark:opacity-55"
                 animate={{ x: [0, -12, 0] }}
                 transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
             />
