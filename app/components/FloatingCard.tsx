@@ -45,6 +45,7 @@ export default function FloatingCard({
   children,
 }: FloatingCardProps) {
   const isPortal = variant === "portal";
+  const swayAmount = isPortal ? 0.9 : 1.8;
 
   return (
     <motion.div
@@ -52,11 +53,11 @@ export default function FloatingCard({
         ? `rounded-3xl overflow-hidden ${colorMap[color]} ${className}`
         : `flex items-center gap-3 px-6 py-4 rounded-full ${colorMap[color]} ${className}`
         }`}
-      style={{ rotate: rotation }}
       initial={{ opacity: 0, y: 40 }}
       animate={{
         opacity: 1,
         y: [0, -floatAmount, 0],
+        rotate: [rotation, rotation + swayAmount, rotation - swayAmount, rotation],
       }}
       transition={{
         opacity: { duration: 0.6, delay: floatDelay },
@@ -66,8 +67,21 @@ export default function FloatingCard({
           ease: "easeInOut",
           delay: floatDelay,
         },
+        rotate: {
+          duration: floatDuration + 1.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: floatDelay,
+        },
       }}
-      whileHover={{ scale: isPortal ? 1.03 : 1.07, transition: { duration: 0.2 } }}
+      whileHover={{
+        scale: isPortal ? 1.035 : 1.07,
+        y: -4,
+        boxShadow: isPortal
+          ? "0 18px 34px rgba(30, 40, 90, 0.22)"
+          : "0 18px 34px rgba(32, 42, 105, 0.26)",
+        transition: { duration: 0.22 },
+      }}
     >
       {isPortal && children ? (
         children
